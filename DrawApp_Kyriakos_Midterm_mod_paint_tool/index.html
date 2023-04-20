@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- adds script for p5.js & p5 DOM -->
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.js"></script>
+    <!-- adds script for sketch file -->
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="helperFunctions.js"></script>
+
+    <script src="freehandTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <!-- adds script for the circle tool -->
+    <script src="circleTool.js"></script>
+    <!-- adds script for the eraser tool -->
+    <script src="eraserTool.js"></script>
+    <!-- adds script for the stamp tool -->
+    <script src="stampTool.js"></script>
+      
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    
+  <body>
+  	<div class="wrapper">
+      <div class="box header">Kyriakos' Drawing App | Up & Down arrows to Increase & Decrease Circle Size
+
+        <button id="clearButton">Clear</button>
+        <button id="saveImageButton">Save Image</button>
+
+        <!-- allows the color to be selected on the drawing tools -->
+        <input type="color" id="colorpicker" value="black" oninput="colorPicker = this.value">
+
+        <!-- allows the thickness slider to increase and decrease the drawing thickness -->
+        <input type="range" min="1" max="100" class="penRange" oninput="thickness = this.value">
+      </div>
+      
+      <div class="box" id="sidebar"></div>
+      <div id="content"></div>
+        <div class="box colourPalette"></div>
+      <div class="box options"></div>
+
+	</div>
+  </body>
+
+</html>
